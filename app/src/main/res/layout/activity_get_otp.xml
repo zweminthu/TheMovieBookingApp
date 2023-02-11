@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+        <FrameLayout
+            android:id="@+id/btnBack"
+            android:elevation="@dimen/margin_medium"
+            android:layout_width="@dimen/margin_xlarge"
+            android:layout_height="@dimen/margin_xlarge">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:src="@drawable/ic_baseline_chevron_left_gray_24dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/SplashScreenImage"
+            android:layout_width="124dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/cinema_logo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/we_ve_sent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="We've sent OTP Code"
+            android:textAppearance="@style/we_ve_sent_"
+            android:layout_gravity="center"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:text="Please enter 6-digit OTP code \n that sent to your phone number."
+            android:textAppearance="@style/please_enter" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Enter OTP Code"
+            android:textColor="@color/gray"
+            android:letterSpacing="-0.03"
+            android:textSize="12sp"
+            android:gravity="center_horizontal|top" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/firstPinView"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:itemBackground="@color/white"
+            android:paddingTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cursorColor="@color/black"
+            app:cursorWidth="2dp"
+            app:hideLineWhenFilled="true"
+            app:itemCount="6"
+            app:itemHeight="50dp"
+            app:itemRadius="8dp"
+            app:itemSpacing="6dp"
+            app:itemWidth="50dp"
+            app:lineColor="@color/black"
+            app:lineWidth="2dp"
+            app:viewType="rectangle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="22dp"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't receive OTP? "
+            android:layout_weight="0.5"
+            android:textSize="16sp"
+            android:letterSpacing="-0.02"
+            android:textColor="@color/white"
+            android:gravity="end" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend Code"
+            android:layout_weight="0.5"
+            android:textSize="16sp"
+            android:letterSpacing="-0.02"
+            android:textColor="@color/neon_green"
+            android:gravity="start" />
+
+    </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnConfirmOTP"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:padding="16dp"
+            android:background="@drawable/btn_style"
+            android:backgroundTint="#00FF6A"
+            android:textColor="@color/black"
+            android:text="Confirm OTP" />
+
+        <TextView
+            android:id="@+id/by_clicking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="94dp"
+            android:textColor="@color/gray"
+            android:text="By clicking, I accept the Terms &amp; Conditions &amp; Privacy Policy"
+            android:layout_gravity="center" />
+
+    </LinearLayout>/
+
+
+</ScrollView>

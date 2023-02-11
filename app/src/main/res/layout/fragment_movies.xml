@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/fragmentMovies"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/flBanner"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carousel"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp" />
+
+<!--                <androidx.viewpager2.widget.ViewPager2-->
+<!--                    android:id="@+id/viewPagerVertical"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="170dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:orientation="vertical" />-->
+
+<!--                <androidx.viewpager2.widget.ViewPager2-->
+<!--                    android:id="@+id/viewPagerOffer"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="170dp" />-->
+
+<!--                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator-->
+<!--                    android:id="@+id/dotsIndicatorBanner"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="bottom|center"-->
+<!--                    android:layout_marginBottom="@dimen/margin_medium"-->
+<!--                    android:elevation="@dimen/margin_small"-->
+<!--                    app:dotsColor="@color/dots_unselected"-->
+<!--                    app:dotsCornerRadius="@dimen/margin_small"-->
+<!--                    app:dotsSize="@dimen/margin_medium"-->
+<!--                    app:dotsSpacing="8dp"-->
+<!--                    app:dotsWidthFactor="1.0"-->
+<!--                    app:progressMode="false"-->
+<!--                    app:selectedDotColor="@color/neon_green" />-->
+
+            </FrameLayout>
+            <include layout="@layout/content_main" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
