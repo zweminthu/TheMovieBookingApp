@@ -24,5 +24,6 @@
         android:enabled="true"
         android:title="@string/profile"
         android:icon="@drawable/img_profile"
+        app:showAsAction="ifRoom"
         />
 </menu>

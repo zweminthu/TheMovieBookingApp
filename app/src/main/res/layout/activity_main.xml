@@ -66,6 +66,7 @@
             android:layout_gravity="bottom"
             android:background="@color/black"
             app:menu="@menu/bot_nav_menu"
+            app:itemTextColor="@drawable/select_mov"
             app:itemIconTint="@drawable/select_mov"
             android:layout_alignParentBottom="true"/>
 

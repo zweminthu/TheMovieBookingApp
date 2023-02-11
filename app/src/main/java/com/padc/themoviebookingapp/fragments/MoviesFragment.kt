@@ -32,10 +32,10 @@ class MoviesFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 //        setUpOfferViewPager()
         // Kotlin
-        val carousel: ImageCarousel = mView.findViewById(R.id.carousel)
+//        val carousel: ImageCarousel = mView.findViewById(R.id.carousel)
 
 // Register lifecycle. For activity this will be lifecycle/getLifecycle() and for fragment it will be viewLifecycleOwner/getViewLifecycleOwner().
-        carousel.registerLifecycle(lifecycle)
+//        carousel.registerLifecycle(lifecycle)
 
         val list = mutableListOf<CarouselItem>()
 
@@ -74,15 +74,15 @@ class MoviesFragment: Fragment() {
 //        )
 //
 //// Just image drawable
-        list.add(
-            CarouselItem(
-                imageDrawable = R.drawable.movie_venom
-            )
-        )
+//        list.add(
+//            CarouselItem(
+//                imageDrawable = R.drawable.movie_venom
+//            )
+//        )
 
 // ...
 
-        carousel.setData(list)
+//        carousel.setData(list)
 
 //        setupCarousel()
     }
