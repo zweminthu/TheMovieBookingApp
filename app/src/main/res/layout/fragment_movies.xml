@@ -2,7 +2,8 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.core.widget.NestedScrollView
         android:id="@+id/fragmentMovies"
@@ -19,40 +20,106 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-<!--                <org.imaginativeworld.whynotimagecarousel.ImageCarousel-->
-<!--                    android:id="@+id/carousel"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="170dp" />-->
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carouselOfferBoard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="170dp"
+                    app:imageScaleType="fitCenter"
+                    app:carouselBackground="@color/black"
+                    app:carouselPaddingEnd="36dp"
+                    app:carouselPaddingStart="36dp"
+                    app:carouselPaddingTop="10dp"
+                    app:carouselType="SHOWCASE"
+                    app:carouselGravity="CENTER"
+                    android:scrollIndicators="start"
+                    app:showNavigationButtons="false"
+                    app:scaleOnScroll="true"
+                    app:scalingFactor="0.15"
+                    app:autoWidthFixing="true"
+                    app:autoPlay="true"
+                    app:autoPlayDelay="3000"
+                    app:infiniteCarousel="true"
+                    app:touchToPause="true"/>
 
-<!--                <androidx.viewpager2.widget.ViewPager2-->
-<!--                    android:id="@+id/viewPagerVertical"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="170dp"-->
-<!--                    android:padding="10dp"-->
-<!--                    android:orientation="vertical" />-->
+                <me.relex.circleindicator.CircleIndicator2
+                    android:id="@+id/dotsIndicatorOfferBoard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginTop="198dp"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:elevation="10dp"
+                    app:ci_drawable="@drawable/selected_dot"
+                    app:ci_drawable_unselected="@drawable/default_dot"
+                    app:dotsSpacing="8dp"
+                    app:dotsWidthFactor="1.0"
+                    app:progressMode="false" />
 
-<!--                <androidx.viewpager2.widget.ViewPager2-->
-<!--                    android:id="@+id/viewPagerOffer"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="170dp" />-->
-
-<!--                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator-->
-<!--                    android:id="@+id/dotsIndicatorBanner"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="bottom|center"-->
-<!--                    android:layout_marginBottom="@dimen/margin_medium"-->
-<!--                    android:elevation="@dimen/margin_small"-->
-<!--                    app:dotsColor="@color/dots_unselected"-->
-<!--                    app:dotsCornerRadius="@dimen/margin_small"-->
-<!--                    app:dotsSize="@dimen/margin_medium"-->
-<!--                    app:dotsSpacing="8dp"-->
-<!--                    app:dotsWidthFactor="1.0"-->
-<!--                    app:progressMode="false"-->
-<!--                    app:selectedDotColor="@color/neon_green" />-->
 
             </FrameLayout>
-            <include layout="@layout/content_main" />
+            <LinearLayout
+                android:id="@+id/llToggleBtnGp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_marginTop="225dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:padding="8dp"
+                android:background="@drawable/gradient_tabs_background">
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/toggleBtnGroup"
+                    app:singleSelection="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNowShowing"
+                    android:layout_width="178dp"
+                    android:layout_height="50dp"
+                    android:text="@string/lbl_now_showing"
+                    android:textColor="@color/gray"
+                    android:textAllCaps="false"
+                    android:elevation="25dp"
+                    android:letterSpacing="-0.02"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    app:cornerRadius="4dp"
+                    app:backgroundTint="@drawable/select_toggle_btn"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnComingSoon"
+                    android:layout_width="178dp"
+                    android:layout_height="50dp"
+                    android:text="@string/lbl_coming_soon"
+                    android:textColor="@color/gray"
+                    android:textAllCaps="false"
+                    android:elevation="25dp"
+                    android:letterSpacing="-0.02"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    app:cornerRadius="4dp"
+                    app:backgroundTint="@drawable/select_toggle_btn"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMovie"
+                android:layout_marginEnd="22dp"
+                android:layout_below="@+id/llToggleBtnGp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:spanCount="2"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/view_holder_movie"/>
         </RelativeLayout>
+
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

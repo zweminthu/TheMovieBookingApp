@@ -43,6 +43,11 @@
 
         </activity>
 
+        <activity android:name=".activities.MovieDetailsActivity"
+            android:exported="true">
+
+        </activity>
+
 
     </application>
 

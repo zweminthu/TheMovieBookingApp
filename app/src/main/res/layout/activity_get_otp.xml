@@ -122,7 +122,7 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:padding="16dp"
-            android:background="@drawable/btn_style"
+            android:background="@drawable/background_neon_green_radius"
             android:backgroundTint="#00FF6A"
             android:textColor="@color/black"
             android:text="Confirm OTP" />

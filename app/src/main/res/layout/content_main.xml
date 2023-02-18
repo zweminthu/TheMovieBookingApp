@@ -12,7 +12,7 @@
         android:layout_width="370dp"
         android:layout_height="54dp"
         android:layout_marginTop="225dp"
-        android:background="@drawable/tabs_background">
+        android:background="@drawable/gradient_tabs_background">
         <LinearLayout
             android:layout_margin="8dp"
             android:layout_width="178dp"

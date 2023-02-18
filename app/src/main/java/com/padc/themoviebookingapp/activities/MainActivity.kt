@@ -3,20 +3,10 @@ package com.padc.themoviebookingapp.activities
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.OneShotPreDrawListener.add
-import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.padc.themoviebookingapp.R
 import com.padc.themoviebookingapp.adapters.BotNavViewPagerAdapter
-import com.padc.themoviebookingapp.adapters.OfferAdapter
-import com.padc.themoviebookingapp.fragments.CinemaFragment
-import com.padc.themoviebookingapp.fragments.MoviesFragment
-import com.padc.themoviebookingapp.fragments.ProfileFragment
-import com.padc.themoviebookingapp.fragments.TicketFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_movies.*
-import org.imaginativeworld.whynotimagecarousel.ImageCarousel
-import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 class MainActivity: AppCompatActivity() {
 
