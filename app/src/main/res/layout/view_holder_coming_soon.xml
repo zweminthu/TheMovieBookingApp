@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivMovieImage"
         android:layout_width="match_parent"
-        app:srcCompat="@drawable/img_venom"
+        app:srcCompat="@drawable/img_minions"
         android:scaleType="centerCrop"
         android:layout_height="212dp"/>
     <androidx.appcompat.widget.AppCompatTextView
@@ -21,6 +21,7 @@
         android:textSize="10sp"
         android:letterSpacing="-0.03"
         android:textColor="#555555"
+        android:textStyle="bold"
         android:gravity="center_horizontal|top"
         android:background="@drawable/background_neon_green_radius"
         android:layout_width="32dp"
@@ -36,7 +37,7 @@
         android:layout_below="@+id/ivMovieImage"
         android:layout_marginStart="8dp"
         android:textSize="@dimen/text_regular_2x"
-        android:text="Venom II"
+        android:text="Minions"
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -45,7 +46,7 @@
         android:layout_below="@+id/ivMovieImage"
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@id/tvMovieName"
-        android:layout_marginStart="38dp"
+        android:layout_marginStart="46dp"
         app:srcCompat="@drawable/icon_rating"
         android:layout_width="32dp"
         android:layout_height="20dp"/>

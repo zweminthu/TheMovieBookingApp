@@ -50,10 +50,7 @@
                     android:layout_marginBottom="@dimen/margin_medium"
                     android:elevation="10dp"
                     app:ci_drawable="@drawable/selected_dot"
-                    app:ci_drawable_unselected="@drawable/default_dot"
-                    app:dotsSpacing="8dp"
-                    app:dotsWidthFactor="1.0"
-                    app:progressMode="false" />
+                    app:ci_drawable_unselected="@drawable/default_dot" />
 
 
             </FrameLayout>
@@ -72,40 +69,42 @@
                 <com.google.android.material.button.MaterialButtonToggleGroup
                     android:id="@+id/toggleBtnGroup"
                     app:singleSelection="true"
+                    app:checkedButton="@+id/btnNowShowing"
+                    app:selectionRequired="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnNowShowing"
-                    android:layout_width="178dp"
-                    android:layout_height="50dp"
-                    android:text="@string/lbl_now_showing"
-                    android:textColor="@color/gray"
-                    android:textAllCaps="false"
-                    android:elevation="25dp"
-                    android:letterSpacing="-0.02"
-                    android:textSize="16sp"
-                    android:gravity="center"
-                    android:layout_weight="0.5"
-                    app:cornerRadius="4dp"
-                    app:backgroundTint="@drawable/select_toggle_btn"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnNowShowing"
+                        android:layout_width="178dp"
+                        android:layout_height="50dp"
+                        android:text="@string/lbl_now_showing"
+                        android:textColor="@color/gray"
+                        android:textAllCaps="false"
+                        android:elevation="25dp"
+                        android:letterSpacing="-0.02"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        app:cornerRadius="4dp"
+                        app:backgroundTint="@drawable/select_toggle_btn"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"/>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnComingSoon"
-                    android:layout_width="178dp"
-                    android:layout_height="50dp"
-                    android:text="@string/lbl_coming_soon"
-                    android:textColor="@color/gray"
-                    android:textAllCaps="false"
-                    android:elevation="25dp"
-                    android:letterSpacing="-0.02"
-                    android:textSize="16sp"
-                    android:gravity="center"
-                    android:layout_weight="0.5"
-                    app:cornerRadius="4dp"
-                    app:backgroundTint="@drawable/select_toggle_btn"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnComingSoon"
+                        android:layout_width="178dp"
+                        android:layout_height="50dp"
+                        android:text="@string/lbl_coming_soon"
+                        android:textColor="@color/gray"
+                        android:textAllCaps="false"
+                        android:elevation="25dp"
+                        android:letterSpacing="-0.02"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        app:cornerRadius="4dp"
+                        app:backgroundTint="@drawable/select_toggle_btn"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"/>
 
                 </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -118,7 +117,9 @@
                 android:layout_height="wrap_content"
                 app:spanCount="2"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                tools:listitem="@layout/view_holder_movie"/>
+                tools:listitem="@layout/view_holder_now_showing"/>
+
+
         </RelativeLayout>
 
     </androidx.core.widget.NestedScrollView>

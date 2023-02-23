@@ -4,11 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.google.android.exoplayer2.ExoPlayer
 import com.padc.themoviebookingapp.R
 import com.padc.themoviebookingapp.activities.MovieDetailsActivity
 import com.padc.themoviebookingapp.adapters.MovieAdapter
+import com.padc.themoviebookingapp.adapters.ComingSoonMovieAdapter
 import com.padc.themoviebookingapp.delegates.MovieViewHolderDelegate
 import kotlinx.android.synthetic.main.fragment_movies.*
 import me.relex.circleindicator.CircleIndicator2
@@ -19,7 +20,9 @@ class MoviesFragment: Fragment(), MovieViewHolderDelegate {
 
 
     lateinit var mMovieAdapter: MovieAdapter
+    lateinit var mCSMovieAdapter: ComingSoonMovieAdapter
     lateinit var mView: View
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,23 +37,25 @@ class MoviesFragment: Fragment(), MovieViewHolderDelegate {
         super.onViewCreated(view, savedInstanceState)
         setUpMovieToggleButton()
         setupCarousel()
-        setUpMovieRecyclerView()
+        setUpMovieRecyclerView(true)
     }
 
     private fun setUpMovieToggleButton() {
 
-        val comingSoonDate: TextView = mView.findViewById(R.id.tvComingSoonDate)
+
         toggleBtnGroup.addOnButtonCheckedListener { toggleButtonGroup, checkedId, isChecked ->
+
             if (isChecked) {
                 when (checkedId) {
-                    R.id.btnNowShowing -> comingSoonDate.visibility = View.INVISIBLE
-                    R.id.btnComingSoon -> comingSoonDate.visibility = View.VISIBLE
+                    R.id.btnNowShowing -> setUpMovieRecyclerView(true)
+
+                    R.id.btnComingSoon -> setUpMovieRecyclerView(false)
                 }
-            } else {
-                comingSoonDate.visibility = View.INVISIBLE
+
             }
         }
-    }
+        }
+
 
     private fun setupCarousel(){
         val carousel: ImageCarousel = mView.findViewById(R.id.carouselOfferBoard)
@@ -97,11 +102,19 @@ class MoviesFragment: Fragment(), MovieViewHolderDelegate {
         startActivity(MovieDetailsActivity.newIntent(requireContext()))
     }
 
-    private fun setUpMovieRecyclerView() {
+    private fun setUpMovieRecyclerView(movieType: Boolean) {
+
         mMovieAdapter = MovieAdapter(this)
-        rvMovie.adapter = mMovieAdapter
+        mCSMovieAdapter = ComingSoonMovieAdapter(this)
 
-
+        if (movieType)
+        {
+            rvMovie.adapter = mMovieAdapter
+        }
+        else
+        {
+            rvMovie.adapter = mCSMovieAdapter
+        }
     }
 
 

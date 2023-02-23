@@ -1,6 +1,312 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/pvMovie"
+                android:layout_width="match_parent"
+                android:layout_height="190dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_back"
+                android:src="@drawable/ic_baseline_chevron_left_white_24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="24dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_share"
+                android:src="@drawable/ic_baseline_share_white_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="24dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMovie"
+                android:layout_width="140dp"
+                android:layout_height="174dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="-30dp"
+                android:layout_below="@+id/pvMovie"
+                app:srcCompat="@drawable/img_black_widow" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDetailMovieName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:letterSpacing="-0.02"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Black Widow"
+                android:layout_toEndOf="@+id/ivMovie"
+                android:layout_below="@+id/pvMovie" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDetailIMDB"
+                android:layout_width="44dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="8dp"
+                android:layout_below="@+id/pvMovie"
+                android:layout_toEndOf="@+id/tvDetailMovieName"
+                app:srcCompat="@drawable/icon_rating" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDetailMovieRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="9.0"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:letterSpacing="-0.03"
+                android:textColor="@color/white"
+                android:layout_below="@+id/pvMovie"
+                android:layout_toEndOf="@+id/ivDetailIMDB"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDetailScreenType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tvDetailMovieName"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/tvDetailMovieName"
+                android:textSize="14sp"
+                android:letterSpacing="-0.02"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="2D, 3D, 3D IMAX, 3D DBOX"
+                />
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ncGenre1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/tvDetailMovieName"
+                android:layout_below="@+id/tvDetailScreenType"
+                android:layout_marginTop="8dp"
+                android:letterSpacing="-0.03"
+                android:text="Action"
+                app:chipCornerRadius="10dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:chipBackgroundColor="@color/neon_green"
+                 />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ncGenre2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/tvDetailScreenType"
+                android:layout_toEndOf="@+id/ncGenre1"
+                android:letterSpacing="-0.03"
+                android:text="Adventure"
+                app:chipCornerRadius="10dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:chipBackgroundColor="@color/neon_green" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ncGenre3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:letterSpacing="-0.03"
+                android:text="Drama"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:chipCornerRadius="10dp"
+                app:chipBackgroundColor="@color/neon_green"
+                android:layout_below="@+id/tvDetailScreenType"
+                android:layout_toEndOf="@+id/ncGenre2" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ncGenre4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/ncGenre1"
+                android:layout_below="@+id/ncGenre1"
+                android:letterSpacing="-0.03"
+                app:chipCornerRadius="10dp"
+                android:text="Animation"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:chipBackgroundColor="@color/neon_green" />
+            
+            <FrameLayout
+                android:id="@+id/flCensorRating"
+                android:layout_width="100dp"
+                android:layout_height="58dp"
+                android:layout_below="@id/ncGenre4"
+                android:layout_marginTop="30dp"
+                android:layout_alignStart="@+id/ivMovie"
+                android:background="@drawable/gradient_movie_detail">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCensorRating"
+                    android:textStyle="bold"
+                    android:text="Censor Rating"
+                    android:textSize="12sp"
+                    android:letterSpacing="-0.03"
+                    android:textColor="@color/white"
+                    android:layout_gravity="top|center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textStyle="bold"
+                    android:text="U/A"
+                    android:textSize="14sp"
+                    android:letterSpacing="-0.02"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flReleaseDate"
+                android:layout_width="100dp"
+                android:layout_height="58dp"
+                android:layout_below="@id/ncGenre4"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="34dp"
+                android:layout_toEndOf="@+id/flCensorRating"
+                android:background="@drawable/gradient_movie_detail">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textStyle="bold"
+                    android:text="Release date"
+                    android:textSize="12sp"
+                    android:letterSpacing="-0.03"
+                    android:textColor="@color/white"
+                    android:layout_gravity="top|center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textStyle="bold"
+                    android:text="May 8th, 2022"
+                    android:textSize="14sp"
+                    android:letterSpacing="-0.02"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/flDuration"
+                android:layout_width="100dp"
+                android:layout_height="58dp"
+                android:layout_below="@id/ncGenre4"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="34dp"
+                android:layout_toEndOf="@+id/flReleaseDate"
+                android:background="@drawable/gradient_movie_detail">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textStyle="bold"
+                    android:text="Duration"
+                    android:textSize="12sp"
+                    android:letterSpacing="-0.03"
+                    android:textColor="@color/white"
+                    android:layout_gravity="top|center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textStyle="bold"
+                    android:text="2hr 15min"
+                    android:textSize="14sp"
+                    android:letterSpacing="-0.02"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStoryLine"
+                android:layout_below="@+id/flCensorRating"
+                android:text="Story Line"
+                android:layout_alignStart="@+id/flCensorRating"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvStory"
+                android:layout_below="@+id/tvStoryLine"
+                android:text="In the 1970s, young Gru tries to join a group of super villains called the Vicious 6 after they oust their leader -- the legendary fighter Wild Knuckles. When the interview turns disastrous, Gru and his Minions go on the run with the Vicious 6 hot on their tails. Luckily, he finds an unlikely source for guidance -- Wild Knuckles himself -- and soon discovers that even bad guys need a little help from their friends.Story Line"
+                android:layout_alignStart="@+id/flCensorRating"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="28dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCast"
+                android:layout_below="@+id/tvStory"
+                android:text="Cast"
+                android:layout_alignStart="@+id/flCensorRating"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:letterSpacing="-0.02"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCast"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/tvCast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/view_holder_cast"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBooking"
+                android:layout_width="240dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="54dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_booking" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
