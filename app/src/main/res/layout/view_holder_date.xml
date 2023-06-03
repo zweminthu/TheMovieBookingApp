@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:layout_height="94dp"
+    android:background="@drawable/background_date_card"
+    android:layout_marginStart="20dp">
+
+    <View
+        android:id="@+id/vRectangle"
+        android:layout_width="22dp"
+        android:layout_height="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/rectangle_date" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDayText"
+        android:layout_below="@+id/vRectangle"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:letterSpacing="-0.02"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="Tomorrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMonth"
+        android:layout_below="@+id/tvDayText"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/black"
+        android:letterSpacing="-0.02"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="May"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <View
+        android:id="@+id/vSemiCircleStart"
+        android:layout_alignParentStart="true"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_below="@id/tvMonth"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/semicircle_left"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDayNo"
+        android:layout_below="@+id/tvMonth"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        android:letterSpacing="-0.02"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/vSemiCircleEnd"
+        android:layout_alignParentEnd="true"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_below="@id/tvMonth"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/semicircle_right"
+        />
+
+</RelativeLayout>

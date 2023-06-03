@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/clTicketConfirmation"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTicketConfirmationTitle"
+            android:layout_marginTop="20dp"
+            android:text="Ticket Confirmation"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:letterSpacing="-0.02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:id="@+id/rlTicketInfo"
+            android:layout_below="@+id/tvTicketConfirmationTitle"
+            android:background="@drawable/gradient_ticket"
+            android:layout_marginTop="50dp"
+            android:layout_marginHorizontal="22dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="36dp"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTicketMovieImage"
+                android:src="@drawable/img_black_widow"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="96dp"
+                android:layout_height="120dp"/>
+            
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTicketMovieName"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/ivTicketMovieImage"
+                android:text="Black Widow (3D) (U/A)"
+                android:textSize="18sp"
+                android:letterSpacing="-0.02"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTicketCinemaName"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="JCGV : Junction City"
+                android:textSize="16sp"
+                android:letterSpacing="-0.02"
+                android:textColor="@color/neon_green"
+                android:layout_below="@+id/tvTicketMovieName"
+                android:layout_toEndOf="@+id/ivTicketMovieImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTicketQty"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:text="M-Ticket(2)"
+                android:textSize="14sp"
+                android:letterSpacing="-0.02"
+                android:textColor="#AAAAAA"
+                android:layout_below="@+id/tvTicketCinemaName"
+                android:layout_toEndOf="@+id/ivTicketMovieImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTicketName"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Gold-G8,G7(SCREEN 2)"
+                android:textSize="16sp"
+                android:letterSpacing="-0.02"
+                android:textColor="@color/white"
+                android:layout_below="@+id/tvTicketQty"
+                android:layout_toEndOf="@+id/ivTicketMovieImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEllipseStart"
+                android:layout_below="@+id/ivTicketMovieImage"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ellipse_start"
+                android:layout_width="20dp"
+                android:layout_height="40dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTicketLine"
+                android:layout_toEndOf="@id/ivEllipseStart"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/ivTicketMovieImage"
+                android:text="__________________________________"
+                android:textSize="16sp"
+                android:letterSpacing="0.14"
+                android:textColor="@color/gray"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEllipseEnd"
+                android:layout_below="@+id/ivTicketMovieImage"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ellipse_end"
+                android:layout_width="20dp"
+                android:layout_height="40dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivIcon_Calendar"
+                android:src="@drawable/ic_calendar"
+                android:layout_below="@+id/tvTicketLine"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="66dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivIcon_Clock"
+                android:src="@drawable/ic_baseline_access_time_neon_green_24dp"
+                android:layout_below="@+id/tvTicketLine"
+                android:layout_toEndOf="@+id/ivIcon_Calendar"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="84dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivIcon_Location"
+                android:src="@drawable/ic_location"
+                android:layout_below="@+id/tvTicketLine"
+                android:layout_toEndOf="@+id/ivIcon_Clock"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="90dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCheckoutDate"
+                android:layout_below="@+id/ivIcon_Calendar"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="24dp"
+                android:text="Sat, 18 Jun, 2022"
+                android:textSize="14sp"
+                android:letterSpacing="-0.02"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCheckoutTime"
+                android:layout_below="@+id/ivIcon_Clock"
+                android:layout_toEndOf="@+id/tvCheckoutDate"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:text="3:30PM"
+                android:textSize="14sp"
+                android:letterSpacing="-0.02"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCheckoutLocation"
+                android:layout_below="@+id/ivIcon_Calendar"
+                android:layout_toEndOf="@+id/tvCheckoutTime"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:gravity="center"
+                android:text="Q5H3+JPP, Corner\nof, Bogyoke Lann,\nYangon"
+                android:textSize="14sp"
+                android:letterSpacing="-0.02"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTicketQRCode"
+            android:src="@drawable/img_ticket_code"
+            android:layout_marginTop="74dp"
+            android:layout_below="@+id/rlTicketInfo"
+            android:layout_centerHorizontal="true"
+            android:layout_width="92dp"
+            android:layout_height="92dp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPin"
+            android:layout_marginTop="20dp"
+            android:text="WAG5LP1C"
+            android:textSize="20sp"
+            android:letterSpacing="-0.02"
+            android:textColor="@color/white"
+            android:layout_below="@+id/ivTicketQRCode"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_below="@+id/tvPin"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTPinLabel"
+            android:text="TPIN : "
+            android:textSize="20sp"
+            android:letterSpacing="-0.02"
+            android:textColor="@color/gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTPin"
+            android:layout_toEndOf="@+id/tvTPinLabel"
+            android:text="WKCSL96"
+            android:textSize="20sp"
+            android:letterSpacing="-0.02"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDone"
+            android:text="DONE"
+            android:textSize="20sp"
+            android:letterSpacing="-0.02"
+            android:textColor="@color/black"
+            android:layout_width="176dp"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:background="@drawable/background_done_btn" />
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

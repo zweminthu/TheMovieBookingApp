@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:weightSum="3">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemName"
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Pizza"
+            android:textSize="14sp"
+            android:letterSpacing="-0.02"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/increment_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/background_add_remove_items"
+            android:src="@drawable/ic_baseline_add_24dp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/quantity_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:text="0"
+            android:textSize="14sp"
+            android:letterSpacing="-0.02"
+            android:textColor="@color/neon_green"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/decrement_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/background_add_remove_items"
+            android:src="@drawable/ic_baseline_remove_24dp" />
+
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemPrice"
+            android:layout_weight="1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="10000Ks"
+            android:textSize="14sp"
+            android:letterSpacing="-0.02"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

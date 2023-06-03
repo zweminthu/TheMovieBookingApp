@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:paddingHorizontal="22dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvItemList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/view_holder_item_list"
+        />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_gravity="center_horizontal|bottom"
+        android:orientation="horizontal"
+        android:background="@drawable/background_neon_green_radius"
+        android:layout_marginTop="16dp"
+        android:layout_width="372dp"
+        android:layout_height="50dp">
+        <FrameLayout
+            android:id="@+id/flFoodDrinksCartInBS"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFoodCart"
+                android:layout_width="28dp"
+                android:layout_height="26dp"
+                android:src="@drawable/img_food_cart"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFoodQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="22dp"
+                android:background="@drawable/background_food_quantity"
+                android:gravity="center_horizontal|top"
+                android:letterSpacing="-0.04"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="8sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnFoodDrinksQuantity"
+                android:layout_width="12dp"
+                android:layout_height="8dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/img_up_black" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/flPriceCheckout"
+            android:layout_marginStart="210dp"
+            android:layout_marginTop="14dp"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/ks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3000Ks"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:letterSpacing="-0.02"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnCheckout"
+                android:src="@drawable/img_right_black"
+                android:layout_marginStart="24dp"
+                android:layout_gravity="center"
+                android:layout_width="16dp"
+                android:layout_height="10dp"/>
+        </FrameLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>

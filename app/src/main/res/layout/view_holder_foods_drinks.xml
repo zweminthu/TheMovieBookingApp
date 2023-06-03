@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/gradient_foods_drinks_background"
+    android:layout_width="170dp"
+    android:layout_height="220dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginStart="16dp">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFoodsDrinks"
+        android:layout_marginStart="14dp"
+        android:src="@drawable/img_pizza"
+        android:layout_width="140dp"
+        android:layout_height="120dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFoodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/ivFoodsDrinks"
+        android:text="Pizza"
+        android:textSize="12sp"
+        android:letterSpacing="0.03"
+        android:textColor="@color/white" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPrice"
+        android:layout_below="@+id/tvFoodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        android:text="10000KS"
+        android:textSize="12sp"
+        android:letterSpacing="0.03"
+        android:textColor="@color/neon_green" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnConfirmOTP"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="150dp"
+        android:layout_height="26dp"
+        android:layout_below="@+id/tvPrice"
+        android:background="@drawable/background_neon_green_radius"
+        android:backgroundTint="#00FF6A"
+        android:text="ADD"
+        android:textSize="14sp"
+        android:letterSpacing="0.02"
+        android:textColor="@color/black"/>
+</RelativeLayout>

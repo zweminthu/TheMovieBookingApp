@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragmentProfile"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <FrameLayout
+            android:id="@+id/flProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_profile_background"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="38dp"
+                android:src="@drawable/img_profile_circled"
+                android:layout_width="84dp"
+                android:layout_height="84dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLoginOrSignUp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="30dp"
+                android:text="Login or Sign Up"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:letterSpacing="-0.02"
+                android:textColor="@color/neon_green"
+                android:layout_width="202dp"
+                android:layout_height="40dp"
+                android:background="@drawable/background_login_sign_up_btn" />
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProfile"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/flProfile"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/view_holder_profile_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

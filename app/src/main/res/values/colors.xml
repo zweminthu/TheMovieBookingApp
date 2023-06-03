@@ -11,4 +11,5 @@
     <color name="colorPrimary">#111111</color>
     <color name="neon_green">#00FF6A</color>
     <color name="dots_unselected">#323232</color>
+    <color name="red">#FF0000</color>
 </resources>

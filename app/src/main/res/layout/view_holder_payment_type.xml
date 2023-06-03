@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginStart="22dp"
+    android:layout_marginTop="10dp"
+    android:layout_width="366dp"
+    android:layout_height="50dp"
+    android:background="@drawable/background_payment_type">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPaymentIcon"
+        android:layout_marginStart="14dp"
+        android:src="@drawable/img_debit_card"
+        android:layout_centerVertical="true"
+        android:layout_width="26dp"
+        android:layout_height="20dp"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPaymentType"
+        android:layout_toEndOf="@+id/ivPaymentIcon"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:text="Credit Card / Debit Card"
+        android:textSize="14sp"
+        android:letterSpacing="-0.02"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPayment"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_baseline_chevron_right_white_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivMovieImage"
         android:layout_width="match_parent"
-        app:srcCompat="@drawable/img_minions"
+        app:srcCompat="@drawable/img_black_widow"
         android:scaleType="centerCrop"
         android:layout_height="212dp"/>
     <androidx.appcompat.widget.AppCompatTextView
@@ -26,6 +26,7 @@
         android:background="@drawable/background_neon_green_radius"
         android:layout_width="32dp"
         android:layout_height="30dp"/>
+
     <View
         android:id="@+id/vGradient"
         android:background="@drawable/gradient_movie"
@@ -37,16 +38,17 @@
         android:layout_below="@+id/ivMovieImage"
         android:layout_marginStart="8dp"
         android:textSize="@dimen/text_regular_2x"
-        android:text="Minions"
+        android:text="Black Widow"
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivIMDB"
         android:layout_below="@+id/ivMovieImage"
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@id/tvMovieName"
-        android:layout_marginStart="46dp"
+        android:layout_marginStart="14dp"
         app:srcCompat="@drawable/icon_rating"
         android:layout_width="32dp"
         android:layout_height="20dp"/>

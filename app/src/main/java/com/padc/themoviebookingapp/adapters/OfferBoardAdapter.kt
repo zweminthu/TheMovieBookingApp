@@ -8,7 +8,7 @@ import com.padc.themoviebookingapp.viewholders.OfferViewHolder
 
 class OfferBoardAdapter(): RecyclerView.Adapter<OfferViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OfferViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.view_holder_now_showing, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.view_holder_movie_list, parent, false)
         return OfferViewHolder(view)
     }
 

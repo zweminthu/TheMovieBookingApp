@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="462dp"
+    android:layout_gravity="center"
+    android:background="@drawable/background_search_name">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPolicyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:text="Ticket Cancellation Policy"
+        android:textSize="14sp"
+        android:letterSpacing="-0.02"
+        android:textColor="@color/white" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFoodDrinksIcon"
+        android:layout_below="@+id/tvPolicyTitle"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="22dp"
+        android:layout_width="28dp"
+        android:layout_height="24dp"
+        android:src="@drawable/img_food_cart_white"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRefundOnFoodDrinks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPolicyTitle"
+        android:layout_toEndOf="@id/ivFoodDrinksIcon"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="100% Refund on F\u0026B"
+        android:textSize="16sp"
+        android:letterSpacing="-0.02"
+        android:textColor="@color/white" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTicketIcon"
+        android:layout_below="@+id/ivFoodDrinksIcon"
+        android:layout_marginTop="26dp"
+        android:layout_marginStart="22dp"
+        android:layout_width="22dp"
+        android:layout_height="24dp"
+        android:src="@drawable/img_ticket_white"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRefundForTickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRefundOnFoodDrinks"
+        android:layout_toEndOf="@id/ivTicketIcon"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:text="Up to 75% Refund for Tickets"
+        android:textSize="16sp"
+        android:letterSpacing="-0.02"
+        android:textColor="@color/white" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRefundUntil2Hr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvRefundForTickets"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="24dp"
+        android:text="-75% refund until 2 hours before show start time"
+        android:textSize="14sp"
+        android:letterSpacing="-0.02"
+        android:textColor="@color/gray" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRefundUntil2Hrs20Mins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRefundUntil2Hr"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="10dp"
+        android:text="-50% refund between 2 hours and 20 minutes before show start time"
+        android:textSize="14sp"
+        android:letterSpacing="-0.02"
+        android:textColor="@color/gray"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRefund_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRefundUntil2Hrs20Mins"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="22dp"
+        android:text="1. Refund not available for Convenience fees,Vouchers, Gift Cards, Taxes etc."
+        android:textSize="14sp"
+        android:letterSpacing="-0.02"
+        android:textColor="@color/white"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRefund_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRefund_1"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="22dp"
+        android:text="2. No cancellation within 20minute of show start time."
+        android:textSize="14sp"
+        android:letterSpacing="-0.02"
+        android:textColor="@color/white"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnClose"
+        android:layout_below="@+id/tvRefund_2"
+        android:layout_centerHorizontal="true"
+        android:layout_width="282dp"
+        android:layout_height="38dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/background_neon_green_radius"
+        android:backgroundTint="#00FF6A"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:letterSpacing="-0.02"
+        android:text="Close" />
+</RelativeLayout>

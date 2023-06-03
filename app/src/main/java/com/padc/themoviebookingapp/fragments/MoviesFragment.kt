@@ -5,11 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.google.android.exoplayer2.ExoPlayer
 import com.padc.themoviebookingapp.R
 import com.padc.themoviebookingapp.activities.MovieDetailsActivity
 import com.padc.themoviebookingapp.adapters.MovieAdapter
-import com.padc.themoviebookingapp.adapters.ComingSoonMovieAdapter
 import com.padc.themoviebookingapp.delegates.MovieViewHolderDelegate
 import kotlinx.android.synthetic.main.fragment_movies.*
 import me.relex.circleindicator.CircleIndicator2
@@ -19,8 +17,8 @@ import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 class MoviesFragment: Fragment(), MovieViewHolderDelegate {
 
 
-    lateinit var mMovieAdapter: MovieAdapter
-    lateinit var mCSMovieAdapter: ComingSoonMovieAdapter
+    lateinit var nsMovieAdapter: MovieAdapter
+    lateinit var csMovieAdapter: MovieAdapter
     lateinit var mView: View
 
 
@@ -92,28 +90,35 @@ class MoviesFragment: Fragment(), MovieViewHolderDelegate {
 
         carousel.setData(list)
         carousel.setIndicator(indicator)
-//        binding.carousel4.setIndicator(binding.customIndicator)
 
+//        binding.carousel4.setIndicator(binding.customIndicator)
 //        dotsIndicatorOfferBoard.attachTo(carouselOfferBoard)
 
     }
 
-    override fun onTapMovie() {
-        startActivity(MovieDetailsActivity.newIntent(requireContext()))
+    override fun onTapMovie(isUpcoming: Boolean) {
+        startActivity(MovieDetailsActivity.newIntent(requireContext(), isUpcoming))
     }
+
+
 
     private fun setUpMovieRecyclerView(movieType: Boolean) {
 
-        mMovieAdapter = MovieAdapter(this)
-        mCSMovieAdapter = ComingSoonMovieAdapter(this)
+        nsMovieAdapter = MovieAdapter(this, false)
+        csMovieAdapter = MovieAdapter(this, true)
 
-        if (movieType)
+    if (movieType)
         {
-            rvMovie.adapter = mMovieAdapter
+            rvMovie.adapter = nsMovieAdapter
+
+
+
         }
         else
         {
-            rvMovie.adapter = mCSMovieAdapter
+            rvMovie.adapter = csMovieAdapter
+
+
         }
     }
 

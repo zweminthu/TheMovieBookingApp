@@ -117,7 +117,7 @@
                 android:layout_height="wrap_content"
                 app:spanCount="2"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                tools:listitem="@layout/view_holder_now_showing"/>
+                tools:listitem="@layout/view_holder_movie_list"/>
 
 
         </RelativeLayout>

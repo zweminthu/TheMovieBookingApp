@@ -16,22 +16,7 @@ class MainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        if(savedInstanceState == null){
-//            supportFragmentManager.commit {
-//                setReorderingAllowed(true)
-//                add<MoviesFragment>(R.layout.fragment_movies)
-//            }
-//        }
-//        supportFragmentManager.beginTransaction()
-//            .add(R.id.action_movies, MoviesFragment())
-////            .add(R.id.fragmentCinema, CinemaFragment())
-////            .add(R.id.fragmentTicket, TicketFragment())
-////            .add(R.id.fragmentProfile, ProfileFragment())
-//            .commit()
-//        supportFragmentManager.commit {
-//            add<MoviesFragment>(R.layout.fragment_movies)
-//        }
-//        setUpCarousel()
+
         setUpBotNavViewPager()
 
 
@@ -42,7 +27,7 @@ class MainActivity: AppCompatActivity() {
         viewPagerBotNav.adapter = mBotNavViewPagerAdapter
 //        viewPagerBotNav.adapter = BotNavViewPagerAdapter(this)
         viewPagerBotNav.currentItem = 0
-        bot_nav.selectedItemId = R.id.action_movies
+        this.bot_nav.selectedItemId = R.id.action_movies
 
         viewPagerBotNav.registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
